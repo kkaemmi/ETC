@@ -1,0 +1,16 @@
+SD 카드 포멧(용량)
+
+1. CMD창 실행
+
+2. diskpart
+
+3. list disk
+- 포멧할 디스크 확인
+
+4. select disk 번호
+
+5. clean
+
+6. create partiton primary
+
+7. format fs=ntfs quick
