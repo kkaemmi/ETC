@@ -1,5 +1,6 @@
 SD 카드 포멧(용량)
 
+방법 1
 1. CMD창 실행
 
 2. diskpart
@@ -7,10 +8,30 @@ SD 카드 포멧(용량)
 3. list disk
 - 포멧할 디스크 확인
 
-4. select disk 번호
+4. select disk n
 
 5. clean
 
 6. create partiton primary
 
 7. format fs=ntfs quick
+
+
+방벙 2
+1. CMD창 실행
+
+2. diskpart
+
+3. list disk
+- 포멧할 디스크 확인
+
+4. select disk n
+
+5. list volume
+- volume 번호(n) 확인
+
+6. select volume n
+
+7. format fs=ntfs quick
+
+8. exit
