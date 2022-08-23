@@ -1,37 +1,19 @@
 SD 카드 포멧(용량)
 
-방법 1
-1. CMD창 실행
+1. 윈도우 컴퓨터에서 동시에 Windows + R을 누른 상태에서 cmd를 입력하고 Enter를 눌러 명령 창 (cmd.exe)을 엽니다.
 
-2. diskpart
+2. Diskpart 프로그램을 실행하려면 diskpart를 입력하십시오.
 
-3. list disk
-- 포멧할 디스크 확인
+3. 컴퓨터의 드라이버를 나열하려면 list disk를 입력하십시오.
 
-4. select disk n
+4. select disk 1을 입력하십시오 (sd 카드 드라이버 번호에 따라 교체하십시오).
 
-5. clean
+5. clean 정리 프로그램을 실행하려면 clean을 입력하십시오 (sd 카드의 모든 데이터가 지워지고 사용자가 중요한 파일을 미리 백업하지 못하게됩니다).
 
-6. create partiton primary
+6. create partition primary  입력하십시오.
 
-7. format fs=ntfs quick
+7. select partition 1을 입력하십시오 (6 단계에서 생성 한 새 파티션이어야 함).
 
+8. active를 입력하여 디스크 파티션을 활성화하십시오.
 
-방벙 2
-1. CMD창 실행
-
-2. diskpart
-
-3. list disk
-- 포멧할 디스크 확인
-
-4. select disk n
-
-5. list volume
-- volume 번호(n) 확인
-
-6. select volume n
-
-7. format fs=ntfs quick
-
-8. exit
+9. format fs = ntfs (또는 형식 fs = fat32)를 입력하여 파티션을 원하는 파일 시스템으로 포맷하십시오.
